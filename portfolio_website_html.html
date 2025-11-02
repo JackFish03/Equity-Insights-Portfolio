@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Equity Insights Portfolio – Data Analyst</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        background: #f4f7fb;
+        color: #2d3436;
+        line-height: 1.6;
+    }
+    header {
+        background: linear-gradient(135deg, #0a3d62, #074270, #0a3d62);
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    h1 {
+        margin-bottom: 0.3rem;
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+    }
+    section {
+        max-width: 950px;
+        margin: 2.5rem auto;
+        background: white;
+        padding: 2.2rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    }
+    h2 {
+        color: #0a3d62;
+        border-left: 6px solid #0a3d62;
+        padding-left: 0.6rem;
+        margin-bottom: 1.2rem;
+    }
+    h3 {
+        margin-bottom: 0.2rem;
+        color: #074270;
+    }
+    .company {
+        margin-bottom: 2.3rem;
+    }
+    .metric-box {
+        background: #e6f2ff;
+        padding: 1.2rem;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        border-left: 5px solid #0a3d62;
+    }
+    .metric-box p {
+        margin: 0.4rem 0;
+    }
+    footer {
+        text-align: center;
+        padding: 2rem;
+        color: #555;
+        font-size: 0.95rem;
+    }
+    .disclaimer {
+        background: #fff3cd;
+        border-left: 6px solid #d4a017;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Equity Insights Portfolio</h1>
+    <p>Data-Driven Analysis • Professionally Structured • Hypothetical Demonstration</p>
+</header>
+
+<section>
+    <h2>Portfolio Purpose</h2>
+    <p>This portfolio showcases advanced analytical thinking, financial interpretation, and data storytelling capabilities suitable for a Data Analyst role at JPMorgan Chase. It includes structured, multi-company insights using hypothetical data crafted for demonstration. The goal is to illustrate clarity, organization, and the ability to distill complex financial information into actionable insights.</p>
+
+    <div class="disclaimer">
+        <b>Disclaimer:</b> All metrics and commentary below are entirely hypothetical and intended only for demonstration of analytical skills. This is not investment advice.
+    </div>
+</section>
+
+<section>
+    <h2>Company Insights</h2>
+    <p>The charts below illustrate hypothetical performance trends for each company, providing visual support for the analytical insights.</p>
+
+    <canvas id="appleChart" width="400" height="200"></canvas>
+    <canvas id="microsoftChart" width="400" height="200"></canvas>
+    <canvas id="nvidiaChart" width="400" height="200"></canvas>
+    <canvas id="jpmChart" width="400" height="200"></canvas>
+
+    <script>
+        const config = (label, data) => ({
+            type: 'line',
+            data: { labels: ['2020','2021','2022','2023','2024'], datasets: [{ label, data }] },
+            options: { responsive: true }
+        });
+        new Chart(document.getElementById('appleChart'), config('Apple Revenue Growth (Hypothetical)', [3,4,5,5.5,6.2]));
+        new Chart(document.getElementById('microsoftChart'), config('Microsoft Azure Growth (Hypothetical)', [20,22,24,26,28]));
+        new Chart(document.getElementById('nvidiaChart'), config('Nvidia Data Center Growth (Hypothetical)', [30,40,50,65,80]));
+        new Chart(document.getElementById('jpmChart'), config('JPM NII Growth (Hypothetical)', [4,6,7,9,11]));
+    </script>
+
+    <!-- Existing company sections follow --></h2>
+
+    <div class="company">
+        <h3>Apple (AAPL)</h3>
+        <div class="metric-box">
+            <p><b>Hypothetical Revenue Growth:</b> +6.2%</p>
+            <p><b>Services Revenue Share:</b> 24%</p>
+            <p><b>Gross Margin:</b> 44%</p>
+            <p><b>Insight:</b> Strong momentum in high‑margin services signals a durable shift in Apple's long-term earnings profile, reducing reliance on hardware refresh cycles.</p>
+        </div>
+    </div>
+
+    <div class="company">
+        <h3>Microsoft (MSFT)</h3>
+        <div class="metric-box">
+            <p><b>Azure YoY Growth:</b> +28%</p>
+            <p><b>AI‑Driven CapEx Growth:</b> +32%</p>
+            <p><b>Operating Margin:</b> 41%</p>
+            <p><b>Insight:</b> Continued AI integration and cloud expansion support multi‑segment margin durability and strengthen Microsoft’s competitive moat.</p>
+        </div>
+    </div>
+
+    <div class="company">
+        <h3>Nvidia (NVDA)</h3>
+        <div class="metric-box">
+            <p><b>Data Center Revenue Growth:</b> +80%</p>
+            <p><b>GPU Market Share:</b> 92%</p>
+            <p><b>R&D Spend Growth:</b> +22%</p>
+            <p><b>Insight:</b> Nvidia remains the central hardware enabler of AI acceleration, benefiting from unmatched ecosystem lock‑in and soaring enterprise demand.</p>
+        </div>
+    </div>
+
+    <div class="company">
+        <h3>JPMorgan Chase (JPM)</h3>
+        <div class="metric-box">
+            <p><b>Net Interest Income Growth:</b> +11%</p>
+            <p><b>CET1 Ratio:</b> 13.6%</p>
+            <p><b>Deposits YoY:</b> +2.4%</p>
+            <p><b>Insight:</b> JPMorgan’s scale advantage and capital strength position it as a market‑leading institution capable of navigating rate cycles and expanding through volatility.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>This hypothetical portfolio demonstrates the ability to synthesize financial datasets, extract meaningful patterns, and communicate performance narratives using both quantitative and qualitative reasoning. In a real-world context, deeper analysis would incorporate trend normalization, macroeconomic adjustments, sensitivity testing, and cross-sectional comparisons across peer groups.</p>
+    <p>Further performance improvements could involve expanding the dataset, integrating multi-variable regression to estimate factor impacts, and incorporating alternative data—such as search trends, network traffic, or credit card transaction signals—to enhance forward-looking insight quality.</p>
+</section>
+
+<footer>
+    © Your Name — Professional Equity Insights Portfolio (Hypothetical)
+</footer>
+
+</body>
+</html>
